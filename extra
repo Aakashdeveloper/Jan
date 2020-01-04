@@ -1,0 +1,90 @@
+Basic Javascript
+NPM
+Basic NodeJS(in built modules)
+NodeJs(full Stack)(Express)
+NodeJs - Mongo
+API With NodeJs(Rest)
+DashBoard(CRUD)
+Login/Logout
+GraphQL API
+Redis
+Third Party APi NodeJs
+NodeJs-Postgres(Sql)
+ChatApp
+OO_NodeJs
+
+------
+Production
+------
+Nginx
+Docker
+
+-----
+GitHub
+
+
+
+/////////
+Javascript
+
+
+>What is NodeJS
+
+Async NonBlock  Single Thread I/O 
+////////////////////////////////////////
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>Check Node<<<
+> Open CMD
+> node -v
+
+//////////
+    NPM
+//////////
+Node package manage
+> open source
+>Packages/node_modules/Dependency/node_package
+
+>>>>>>>>><<<<<
+>>>> Local Dependency
+>>>> Global Dependency
+
+
+Javascript Object Notation
+{
+    "name":"abc",
+    "class":1
+}
+/////////
+Package.json
+>name
+>version
+>commands
+>Dependency
+
+//////////
+Step to create package.json
+///////////
+> Navigate to folder where you want to create using CMD
+> npm init
+> Answer all question
+> type "yes"
+
+//////////
+Step to install local Dependency
+///////////
+> Navigate to folder using CMD
+> npm install <package_name>/npm i  <package_name>
+
+//////////
+Step to install global Dependency
+///////////
+Win
+> run cmd as administrator
+> npm i -g @abc
+
+Mac/Linux
+> run terminal
+> sudo npm i -g @abc
+
+@aakashdeveeloper/create-node-app
+
