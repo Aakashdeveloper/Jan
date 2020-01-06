@@ -88,3 +88,7 @@ Mac/Linux
 
 @aakashdeveeloper/create-node-app
 
+//////Continous Development//////
+nodemon
+
+> npm i -g nodemon
