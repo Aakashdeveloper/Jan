@@ -92,3 +92,23 @@ Mac/Linux
 nodemon
 
 > npm i -g nodemon
+
+
+for Production
+> npm start
+
+for Development
+> npm run dev 
+
+
+
+///
+Es5
+
+function add(a,b){
+    return a+b
+}
+
+//es6
+
+const add = (a,b) => { return a+b }
