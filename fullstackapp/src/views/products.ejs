@@ -89,18 +89,18 @@
           
           
           <!--/stories-->
-          <% for(i=0;i<movies.length;i++){%>
+          <% for(i=0;i<products.length;i++){%>
           <div class="row">    
             <br>
             <div class="col-md-2 col-sm-3 text-center">
-              <a class="story-title" href="#"><img alt="" src="<%=movies[i].imageUrl%>" style="width:100px;height:100px" class="img-circle"></a>
+              <a class="story-title" href="#"><img alt="" src="<%=products[i].imageUrl%>" style="width:100px;height:100px" class="img-circle"></a>
             </div>
             <div class="col-md-10 col-sm-9">
-              <h3><%=movies[i].name%></h3>
+              <h3><%=products[i].productName%></h3>
               <div class="row">
                 <div class="col-xs-9">
                   <h4>
-                  <small style="font-family:courier,'new courier';" class="text-muted"><%=movies[i].language%>  • <a href="/movies/details" class="text-muted">Read More</a></small>
+                  <small style="font-family:courier,'new courier';" class="text-muted"> $<%=products[i].price%>  • <a href="/products/details" class="text-muted">Read More</a></small>
                   </h4></div>
                 <div class="col-xs-3"></div>
               </div>
