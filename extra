@@ -210,3 +210,22 @@ db.myproduct.find().sort({"place":-1}).limit(3)
  console.log(a)
 
 db.product.insertMany([{},{},{}])
+
+////
+npm i ejs express request
+//////
+
+
+var a = 10
+var b = "my age is "+a
+var c = `my age is ${a}`
+
+//Es5
+function add(a,b){
+    return a+b
+}
+
+//Es6
+var add = (a,b) => { return a+b}
+
+npm i @babel/core @babel/preset-env @babel/register --save-dev
