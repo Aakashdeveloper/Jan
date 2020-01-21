@@ -6,16 +6,12 @@ var app = express();
 var port = 7600;
 let db;
 var mongourl = 'mongodb://127.0.0.1:27017/';
-var col_name="janUser";
-
-app.use(express.static(__dirname+'/public'));
-app.set('views', './src/views');
-app.set('view engine','ejs');
+var col_name="janUser"
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
-app.get('/health',(req,res) => {
+app.get('/',(req,res) => {
     res.send("Api is running");
 });
 
@@ -32,19 +28,19 @@ app.post('/addUser',(req,res) => {
 });
 
 // Get User from DB
-app.get('/',(req,res) => {
-    db.collection(col_name).find({actin:true}).toArray((err,result) => {
+/*app.get('/user',(req,res) => {
+    db.collection(col_name).find().toArray((err,result) => {
         if(err) throw err;
-        res.render('index',{data:result})
+        res.status(200).send(result)
     })
-});
+});*/
 
 app.get('/user',(req,res) => {
     var query = {};
     if(req.query.id && req.query.name){
         query = {name:req.query.name,id:parseInt(req.query.id),actin:true}
     }else if(req.query.id){
-        query = {"id":req.query.id,actin:true}
+        query = {"id":parseInt(req.query.id),actin:true}
     } else if(req.query.name){
         query = {"name":req.query.name,actin:true}
     } else{
@@ -58,15 +54,12 @@ app.get('/user',(req,res) => {
 });
 
 app.put('/updateUser',(req,res) => {
-    console.log(req.body)
     db.collection(col_name)
         .findOneAndUpdate({'id': req.body.id},{
             $set:{
                 id:req.body.id,
                 name:req.body.name,
-                city:req.body.city,
-                phone:req.body.phone,
-                actin:true
+                city:req.body.city
             }
         },{
             upsert:true
