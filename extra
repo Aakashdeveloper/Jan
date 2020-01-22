@@ -5,16 +5,17 @@ NodeJs(full Stack)(Express)
 NodeJs - Mongo
 API With NodeJs(Rest)
 DashBoard(CRUD)
-Login/Logout
-GraphQL API
-Redis
 Third Party APi NodeJs
-NodeJs-Postgres(Sql)
-ChatApp
-OO_NodeJs
+Redis           = .5
+Email With Node = .5
+Login/Logout  = 3
+GraphQL API   = 1
+NodeJs-Postgres(Sql) =1
+ChatApp =1
+OO_NodeJs=1
 
 ------
-Production
+Production=2
 ------
 Nginx
 Docker

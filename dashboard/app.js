@@ -21,12 +21,19 @@ app.get('/health',(req,res) => {
 
 // Add useer to DB
 app.post('/addUser',(req,res) => {
+    var data = {
+        "id" : req.body.id,
+        "name" :req.body.name,
+        "city" : req.body.city,
+        "phone" : req.body.phone,
+        "actin" : true
+    }
     db.collection(col_name)
-        .insertOne(req.body,(err,result) => {
+        .insertOne(data,(err,result) => {
             if(err){
                 res.status(401)
             }else{
-                res.send('data added')
+                res.redirect('/')
             }
         })
 });
@@ -56,6 +63,7 @@ app.get('/user',(req,res) => {
         res.status(200).send(result)
     });
 });
+
 
 app.put('/updateUser',(req,res) => {
     console.log(req.body)
@@ -104,6 +112,11 @@ app.put('/softDelete',(req,res) => {
         })
 });
 
+app.get('/new',(req,res) => {
+    var id = Math.floor(Math.random()*10000)
+    var active = true
+    res.render('admin',{id:id,active})
+})
 
 
 
