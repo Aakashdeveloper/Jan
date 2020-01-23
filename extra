@@ -230,3 +230,18 @@ function add(a,b){
 var add = (a,b) => { return a+b}
 
 npm i @babel/core @babel/preset-env @babel/register --save-dev
+
+
+////
+Download and install Redis
+> redis-server
+> redis-cli
+> KEYS *
+> set key value
+> get 'keyname'
+
+>npm i redis response-time axios
+
+
+> npm i -g @aakashdeveloper/create-node-app
+> generate
