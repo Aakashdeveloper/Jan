@@ -246,3 +246,6 @@ Download and install Redis
 
 > npm i -g @aakashdeveloper/create-node-app
 > generate
+
+
+npm i express body-parser bcryptjs jsonwebtoken mongoose
