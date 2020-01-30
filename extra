@@ -9,14 +9,13 @@ Third Party APi NodeJs
 Redis
 Email With Node
 OO_NodeJs
-Login/Logout  = 3
-GraphQL API   = 1
-NodeJs-Postgres(Sql) =1
-ChatApp =1
-
+Login/Logout
+NodeJs-Postgres(Sql)
+GraphQL API
+ChatApp
 
 ------
-Production=2
+Production
 ------
 Nginx
 Docker
