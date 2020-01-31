@@ -248,3 +248,34 @@ Download and install Redis
 
 
 npm i express body-parser bcryptjs jsonwebtoken mongoose
+
+
+docker build . -t nareshitJan
+docker image ls
+docker run -p 8760:7800 nareshitjan
+
+
+npm i -g pm2
+
+pm2 start start.js
+
+
+//nginx.conf
+    server {
+        listen       8082;
+        server_name  localhost;
+
+        location / {
+	    proxy_pass http://127.0.0.1:8900;
+	    proxy_http_version 1.1;
+    	    proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection 'upgrade';
+            proxy_set_header Host $host;
+            proxy_cache_bypass $http_upgrade;
+        }
+    }
+
+   >  nginx
+
+
+npm i mocha chai chai-http
